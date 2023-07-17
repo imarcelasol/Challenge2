@@ -9,58 +9,56 @@
     <!-- Icono de la calculadora -->
     <link rel="icon"  href="Calculadora.png"/> 
 </head> 
-<body> 
+<body>
     <!-- Contenedor principal -->
-    <div class="container"> 
-        <div class="display"> 
+    <div class="calculator">
+        <div class="calculator__display"> 
             <input id="screen" type="text" placeholder="0">
         </div>
-        <!-- Contenedor para los botones -->
-        <div class="btns"> 
-            <div class="row">
-                <button id="ce" onclick="backspc()">CE</button> 
-                <button onclick="fact()">x!</button> 
-                <button class="btn">(</button> 
-                <button class="btn">)</button> 
-                <button class="btn">%</button> 
+        <!-- Contenedor para los botones (elemento) -->
+        <div class="calculator__buttons">
+            <div class="calculator__row">
+                <button class="calculator__button calculator__button--ce" onclick="backspc()">CE</button>
+                <button class="calculator__button calculator__button--factorial" onclick="fact()">x!</button>
+                <button class="calculator__button calculator__button--parenthesis">(</button>
+                <button class="calculator__button calculator__button--parenthesis">)</button>
+                <button class="calculator__button calculator__button--percentage">%</button>
             </div>
 
-            <div class="row"> 
-                <button id="ac" onclick="screen.value=''">AC</button> 
-                <button class="btn">7</button> 
-                <button class="btn">8</button> 
-                <button class="btn">9</button> 
-                <button class="btn">÷</button> 
+            <div class="calculator__row">
+                <button class="calculator__button calculator__button--ac" onclick="screen.value=''">AC</button>
+                <button class="calculator__button">7</button>
+                <button class="calculator__button">8</button>
+                <button class="calculator__button">9</button>
+                <button class="calculator__button calculator__button--divide">÷</button>
             </div>
 
-        
-            <div class="row">
-                <button onclick="log()">log</button>
-                <button class="btn">4</button>
-                <button class="btn">5</button>
-                <button class="btn">6</button>
-                <button class="btn">×</button>
+            <div class="calculator__row">
+                <button class="calculator__button calculator__button--log">log</button>
+                <button class="calculator__button">4</button>
+                <button class="calculator__button">5</button>
+                <button class="calculator__button">6</button>
+                <button class="calculator__button calculator__button--multiply">×</button>
             </div>
 
-            <div class="row">
-                <button onclick="sqrt()">√</button>
-                <button class="btn">1</button>
-                <button class="btn">2</button>
-                <button class="btn">3</button>
-                <button class="btn">-</button>
+            <div class="calculator__row">
+                <button class="calculator__button calculator__button--sqrt">√</button>
+                <button class="calculator__button">1</button>
+                <button class="calculator__button">2</button>
+                <button class="calculator__button">3</button>
+                <button class="calculator__button calculator__button--subtract">-</button>
             </div>
 
-            <div class="row">
-                <button onclick="pow()">x <span style="position: relative; bottom: .4em; right: .1em;">y</span>
+            <div class="calculator__row">
+                <button class="calculator__button calculator__button--pow">x <span style="position: relative; bottom: .4em; right: .1em;">y</span>
                 </button>
-                <button class="btn">0</button>
-                <button class="btn">.</button>
-                <button id="eval" onclick="screen.value=eval(screen.value)">=</button>
-                <button class="btn">+</button>
+                <button class="calculator__button">0</button>
+                <button class="calculator__button">.</button>
+                <button class="calculator__button calculator__button--evaluate" onclick="screen.value=eval(screen.value)">=</button>
+                <button class="calculator__button calculator__button--add">+</button>
             </div>
         </div>
     </div>
     <!-- Enlace al archivo JavaScript -->
-    <script src="script.js"></script> 
+    <script src="script.js"></script>
 </body>
-</html>
