@@ -1,5 +1,9 @@
+/* Importando la normalizacion de la pagina Normalize.css */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
+
+/* variables css */
 :root {
-  /* Variables de colores y sombras */
+
   --primary-color: #33ccff;
   --secondary-color: #33cc33;
   --tertiary-color: #ff3399;
@@ -8,10 +12,11 @@
   --box-shadow-primary: inset 5px 5px 8px #66d9ff, inset -5px -5px 8px #00ace6;
   --box-shadow-secondary: inset 5px 5px 8px #2eb82e, inset -5px -5px 8px #33cc33;
   --box-shadow-tertiary: inset 5px 5px 8px #e60073, inset -5px -5px 8px #ff3399;
+
 }
 
 body {
-  /* Estilos para el body*/ 
+
   padding: 0;
   margin: 0;
   display: flex;
@@ -20,31 +25,53 @@ body {
   min-height: 100vh;
   user-select: none;
   background: #ecf0f3;
+
 }
 
-.calculator {
-  /* Estilos para el contenedor principal (bloque) */
+.container {
+
   margin-left: 1.8em;
   padding: 20px;
   border-radius: 8px;
   box-shadow: var(--box-shadow-light);
+
 }
 
-.calculator__display {
-  /* Estilos para el display (elemento) dentro del bloque calculator */
-  margin-bottom: .5em;
-  width: auto;
-  height: 70px;
-  font-size: 35px;
-  outline: none;
-  border: none;
-  text-align: right;
-  padding-right: .5em;
-  background: #ecf0f3;
-  border-radius: 6px;
-  box-shadow: var(--box-shadow-light);
+.content {
+
+  width: 100%;
+  margin-top: 1.7em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
 }
-.calculator__display #screen{
+
+.row button {
+
+  width: 76px;
+  height: 30px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  margin: 5px;
+  border-radius: 4px;
+  transition: .1s;
+  box-shadow: var(--box-shadow-light);
+
+}
+
+.row button:hover {
+
+  box-shadow: var(--box-shadow-dark);
+  background: #fff;
+
+}
+
+.display #screen {
+
+  margin-bottom: .5em;
   width: 97%;
   height: 70px;
   font-size: 35px;
@@ -54,44 +81,51 @@ body {
   padding-right: .5em;
   background: #ecf0f3;
   border-radius: 6px;
-}
-.calculator__button {
-  /* Estilos base para todos los botones (elemento) */
-  width: 78px;
-  height: 30px;
-  font-size: 16px;
-  border: none;
-  outline: none;
-  margin: 5px;
-  border-radius: 4px;
-  transition: .1s;
   box-shadow: var(--box-shadow-light);
+
 }
 
-/* Estilos específicos para ciertos botones modificados */
-.calculator__button--ce {
-  background: var(--tertiary-color);
-  color: #fff;
-}
+#eval {
 
-.calculator__button--ce:hover {
-  box-shadow: var(--box-shadow-tertiary);
-}
-
-.calculator__button--ac {
-  background: var(--secondary-color);
-  color: #fff;
-}
-
-.calculator__button--ac:hover {
-  box-shadow: var(--box-shadow-secondary);
-}
-
-.calculator__button--evaluate {
   background: var(--primary-color);
   color: #fff;
+  box-shadow: var(--box-shadow-primary);
+
 }
 
-.calculator__button--evaluate:hover {
+#eval:hover {
+
   box-shadow: var(--box-shadow-primary);
+
 }
+
+#ac {
+
+  background: var(--secondary-color);
+  color: #fff;
+
+}
+
+#ac:hover {
+
+  box-shadow: var(--box-shadow-secondary);
+
+}
+
+#ce {
+
+  background: var(--tertiary-color);
+  color: #fff;
+
+}
+
+#ce:hover {
+
+  box-shadow: var(--box-shadow-tertiary);
+
+}
+
+
+
+
+
